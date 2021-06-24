@@ -233,9 +233,17 @@ export const state = () => ({
 export const getters = {
   // function that returns a function
   getProductById: state => {
-    // id = payload, and id is a string so ==
+    // id = payload
     return id => {
+      // id is a string comeing from param and product.id is a number so ==
       return state.products.find(product => product.id == id);
     };
+  }
+};
+
+export const mutations = {
+  addItem(state, id) {
+    let item = state.products.find(product => product.id == id);
+    state.myRentals.push(item);
   }
 };

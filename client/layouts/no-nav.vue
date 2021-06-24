@@ -1,11 +1,15 @@
 <template>
-  <div>
-    <Nav/>
+<!-- this layout that we created, will not display the Nav (from default.vue file) on the my-item.vue file (on pages folder) -->
+  <div class="container">
+    <NuxtLink to="/">Go Back</NuxtLink>
     <Nuxt />
   </div>
 </template>
 
 <style>
+.container{
+  padding: 5rem 0;
+}
 html {
   font-family:
     'Source Sans Pro',
